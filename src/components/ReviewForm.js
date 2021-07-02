@@ -7,14 +7,15 @@ export default class ReviewForm extends React.Component {
             <div id="reviewForm">
                 <h3>Leave a Review:</h3>
                 <form>
-                    <label htmlFor="reviewName">Name: </label>
-                    <input type="text" name="reviewName" id="reviewName"></input>
+                    <label htmlFor="reviewName" className="form-label">Name: </label>
+                    <input type="text" name="reviewName" id="reviewName" className="form-control"></input>
+                    <label htmlFor="reviewStars" className="form-label">Rating:</label>
                     <Stars />
-                    <br />
-                    <label htmlFor="reviewText">Review: </label>
-                    <textarea name="reviewText" id="reviewtext"></textarea>
                     <input type="hidden" name="reviewStars" id="reviewStars"></input>
-                    <button type="button">Submit</button>
+                    <label htmlFor="reviewText" className="form-label">Review: </label>
+                    <textarea name="reviewText" id="reviewtext" className="form-control"></textarea>
+                    
+                    <button type="button" className="btn btn-primary">Submit</button>
                 </form>
             </div>
         )
